@@ -1,3 +1,5 @@
+package legend1;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 public class PurchaseItems {
     private int id;
-    private int productId;
-    private String productName;
-    private int productPrice;
+    private int filmId;
+    private String filmName;
+    private int filmPrice;
     private int count;
 }
