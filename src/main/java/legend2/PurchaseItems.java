@@ -1,4 +1,4 @@
-package legend1;
+package legend2;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
