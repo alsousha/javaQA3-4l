@@ -19,10 +19,11 @@ public class AfishaRepository {
     public PurchaseItems[] findAll() {
         return items;
     }
-    public PurchaseItems findById(int id){
+
+    public PurchaseItems findById(int id) {
         PurchaseItems item = null;
         for (int i = 0; i < items.length; i++) {
-            if (i==id) item = this.items[i];
+            if (i == id) item = this.items[i];
         }
         return item;
     }
@@ -39,7 +40,8 @@ public class AfishaRepository {
         }
         items = tmp;
     }
-    public void removeAll(){
+
+    public void removeAll() {
         this.items = null;
     }
 }
