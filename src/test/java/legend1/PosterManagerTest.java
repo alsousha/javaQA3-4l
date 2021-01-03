@@ -1,10 +1,10 @@
-import org.junit.jupiter.api.BeforeEach;
+package legend1;
+
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class PosterManagerTestNonEmpty {
-    //PosterManager posterManager = new PosterManager(4);
+class PosterManagerTest {
     PurchaseItems first = new PurchaseItems(1, 1, "first", 1, 1);
     PurchaseItems second = new PurchaseItems(2, 2, "second", 1, 1);
     PurchaseItems third = new PurchaseItems(3, 3, "third", 1, 1);
@@ -17,8 +17,9 @@ class PosterManagerTestNonEmpty {
     PurchaseItems film10 = new PurchaseItems(10, 10, "film10", 1, 1);
     PurchaseItems film11 = new PurchaseItems(11, 11, "film11", 1, 1);
 
+
     @Test
-    public void showFilmsLent_countFilms_4(){
+    public void showFilmsLent_countFilms_4() {
         PosterManager posterManager = new PosterManager(4);
         posterManager.add(first);
         posterManager.add(second);
@@ -31,8 +32,9 @@ class PosterManagerTestNonEmpty {
 
         assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void showFilmsLent_countFilms_11(){
+    public void showFilmsLent_countFilms_11() {
         PosterManager posterManager = new PosterManager(11);
         posterManager.add(first);
         posterManager.add(second);
@@ -52,8 +54,9 @@ class PosterManagerTestNonEmpty {
 
         assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void showFilmsLent_countFilms_Default(){
+    public void showFilmsLent_countFilms_Default() {
         PosterManager posterManager = new PosterManager();
         posterManager.add(first);
         posterManager.add(second);
@@ -72,28 +75,5 @@ class PosterManagerTestNonEmpty {
 
         assertArrayEquals(expected, actual);
     }
-/*
-    @Test
-    public void shouldNotRemoveIfExists(){
-        int idToRemove = 1;
 
-        posterManager.removeById(idToRemove);
-
-        PurchaseItems[] actual = posterManager.getLast10();
-        PurchaseItems[] expected = new PurchaseItems[]{third, second};
-
-        assertArrayEquals(expected, actual);
-    }
-    @Test
-    public void shouldNotRemoveIfNotExists(){
-        int idToRemove = 2;
-        posterManager.removeById(idToRemove);
-
-        PurchaseItems[] actual = posterManager.getLast10();
-        PurchaseItems[] expected = new PurchaseItems[]{third, first};
-
-        assertArrayEquals(expected, actual);
-    }
-
- */
 }
